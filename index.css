@@ -8,7 +8,7 @@ body {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   font-family: "Arial", sans-serif;
   overflow-x: hidden;
-  height: 550vh;
+  height: 750vh;
 }
 
 .music-control {
