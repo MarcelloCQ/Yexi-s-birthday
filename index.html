@@ -1,22 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yexi's birthday <3</title>
+    <title>Feliz cumpleaños Yexi</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <main>
-      <div class="main-body">
-        <h1 class="main-title">Landing page para mi Yexi por su cumple</h1>
+    <div class="progress-bar" id="progressBar"></div>
 
-        <p class="main-description">
-          Si te he fallado te pido perdón de la única forma que sé. Has cambiado
-          mi vida, me has hecho crecer, es que no soy el mismo que ayer.
-        </p>
+    <div class="music-control" id="musicControl" title="Controlar música">
+      <svg id="playIcon" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z" />
+      </svg>
+      <svg id="pauseIcon" viewBox="0 0 24 24" style="display: none">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+      </svg>
+    </div>
+
+    <div class="phrase-container">
+      <div class="phrase active" data-phrase="0">
+        ¡Feliz cumpleaños Yexi!
+
+        <br />
+        <span>
+          Quería darte este regalo, ya que no hay otra cosa que pueda darte.
+        </span>
+        <br />
+        <span>
+          No tengo muchas imágenes y muchas cosas que pueda decirte, pero espero
+          que al menos pueda servirme esto de despedida.
+        </span>
       </div>
-    </main>
+      <div class="phrase" data-phrase="1">
+        Este regalo fue algo muy especial para mí.
+        <br />
+        Nunca me sentí tan especial, que alguien me diera un regalo haciendome
+        sentir importante.
+        <br />
+        <img src="./img/primer-ano.jpg" class="img-record-1" alt="" />
+      </div>
+      <div class="phrase" data-phrase="2">
+        Esta foto fue de aquella vez que caminamos de Tottus a Miraflores y
+        llegamos a la parque del amor. Para mí fue la primera vez que visité ese
+        lugar, fue muy especial.
+        <br />
+        <img src="./img/parque-amor.jpg" class="img-record-2" alt="" />
+      </div>
+      <div class="phrase" data-phrase="3">
+        Tus regalos más especiales para mí, tus dibujos. Siempre los amé.
+        <br />
+        <div class="img-container">
+          <img src="./img/zed.jpg" class="img-record-3" alt="" />
+          <img src="./img/dibujo-yexi.jpg" class="img-record-4" alt="" />
+        </div>
+      </div>
+      <div class="phrase" data-phrase="4">
+        Recuerdo cuando tocaba en tu cuarto, cuando tocaba en la casa. Cuando me
+        escuchabas. Me hizo feliz. Muchas gracias.
+        <br />
+        <img src="./img/tocando-guitarra.jpg" class="img-record-5" alt="" />
+      </div>
+      <div class="phrase" data-phrase="5">
+        Fue especial cuando me acompañaste a Canta con mi familia. Nunca hice
+        algo así. Comenzaste a hacerte una parte aún más especial de mi vida.
+        <br />
+        <div class="img-container">
+          <img src="./img/canta-1.jpg" class="img-record-6" alt="" />
+          <img src="./img/canta-2.jpg" class="img-record-6" alt="" />
+        </div>
+      </div>
+      <div class="phrase" data-phrase="6">
+        <img src="./img/canta-3.jpg" class="img-record-7" alt="" />
+      </div>
+      <div class="phrase" data-phrase="7">
+        Tuvimos momentos buenos, momentos malos. Pasamos muchas cosas juntos.
+        <br />
+        Este recuerdo escuchando música en tu cuarto.
+        <img src="./img/escuchando-musica.jpg" class="img-record-8" alt="" />
+      </div>
+
+      <div class="phrase" data-phrase="8">
+        Esta foto me recuerdo uno de los momentos más difíciles y bajos que
+        enfrenté en mi vida.
+        <br />
+        A pesar de todo, me diste otra oportunidad y me sentí vivo de nuevo.
+        <br />
+        <img src="./img/beso-yexi.jpg" class="img-record-9" alt="" />
+      </div>
+
+      <div class="phrase" data-phrase="9">
+        Luego de ese momento difícil, comenzamos a vivir juntos, nos conocimos
+        mejor y pasamos momentos muy buenos. Este es un recuerdo de aquellos
+        días en los que íbamos a casa de tu mamá y tomábamos chelita escuchando
+        música.
+        <br />
+        <img src="./img/chelita-yexi.png" class="img-record-10" alt="" />
+      </div>
+
+      <div class="phrase" data-phrase="10">
+        Ya, en estos momentos, sin tí, soy como un fantasma, regresando sobre
+        sus propios pasos.
+        <br />
+        Los lugares importantes, los lugares especiales...
+        <div class="img-container">
+          <img src="./img/lugar-especial-1.jpeg" class="img-record-11" alt="" />
+          <img src="./img/lugar-especial-2.jpeg" class="img-record-12" alt="" />
+        </div>
+      </div>
+
+      <div class="phrase" data-phrase="11">
+        Por último, me queda este recuerdo en el que más tarde, ese mismo día,
+        tus palabras me quedarían grabadas en la piel.
+        <br />
+        "Haría cualquier cosa por tí".
+        <br />
+        Algún día estaré a la altura de tus palabras.
+        <div class="img-container">
+          <img
+            src="./img/ultima-foto-ghibli.png"
+            class="img-record-13"
+            alt=""
+          />
+          <img src="./img/ultima-foto.jpg" class="img-record-14" alt="" />
+        </div>
+      </div>
+
+      <div class="phrase" data-phrase="12">
+        Pensé en escribirte una historia en esta parte final, pero nuestra
+        historia es algo que va más allá de lo que pueda imaginar en este
+        momento.
+        <br />
+        Tengo tantas cosas que quiero decirte, tanto que quiero demostrarte,
+        pero no es el momento, ya tal vez no hay oportunidad. No lo sé, no puedo
+        ver el futuro...
+        <br />
+        Lo que si tengo claro es que debo aprender a no depender de nadie y si
+        elijo compartir mi vida, debe ser por amor y no por dependencia
+        emocional.
+      </div>
+
+      <div class="phrase" data-phrase="13">
+        Me enseñaste muchas cosas y esta es la última y mejor cosa que aprendí
+        de ti.
+        <br />
+        A pesar que duela, que sea difícil y que llore con mucho dolor, siempre
+        debo elegirme a mí y mi bienestar.
+        <br />
+        Hablándo con el psicólogo, me preguntó que si decidieras volver conmigo
+        pero poniendome condiciones, ¿qué estaría dispuesto a hacer?.
+        <br />
+        En ese momento mi corazón resucitó y me volvió el alma al cuerpo y
+        respondí en instantáneo... "Haría cualquier cosa que me pida, lo que
+        sea."
+      </div>
+
+      <div class="phrase" data-phrase="14">
+        Entendí que no puedo hacer eso, tengo que entenderte, tengo que soltarte
+        y dejarte ser libre, vivir, elegir tu bienestar y si alguna vez surge
+        alguna oportunidad, sea porque te eliges a tí, porque te amas y eliges
+        compartir conmigo porque ves en mí algo bueno para tí.
+        <br />
+        Yo debo hacer lo mismo, debo elegirme a mí y elegirte por amor, no
+        porque no puedo vivir sin tí, sino que puedo vivir sin tí, pero a pesar
+        de eso, te elijo y te comparto mi vida.
+      </div>
+    </div>
+
+    <div class="scroll-indicator">↓ Desliza para continuar ↓</div>
+
     <script src="./index.js"></script>
   </body>
 </html>
