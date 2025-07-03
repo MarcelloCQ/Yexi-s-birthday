@@ -8,7 +8,7 @@ body {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
-  height: 750vh;
+  height: 850vh;
 }
 
 .music-control {
@@ -198,7 +198,7 @@ img {
 
 @media (min-width: 1200px) {
   body {
-    height: 850vh;
+    height: 750vh;
   }
   .img-record-6 {
     max-width: 500px;
