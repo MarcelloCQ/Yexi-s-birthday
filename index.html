@@ -10,62 +10,71 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <div class="music-control" id="musicControl" title="Controlar música">
-      <svg id="playIcon" viewBox="0 0 24 24">
+      <svg id="playIcon" viewBox="0 0 24 24" style="display: none">
         <path d="M8 5v14l11-7z" />
       </svg>
-      <svg id="pauseIcon" viewBox="0 0 24 24" style="display: none">
+      <svg id="pauseIcon" viewBox="0 0 24 24">
         <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
       </svg>
     </div>
+    <audio id="bgMusic" loop>
+      <source src="./audios/final-song.mp3" type="audio/mpeg" />
+    </audio>
 
     <div class="phrase-container">
       <div class="phrase active" data-phrase="0">
-        ¡Feliz cumpleaños Yexi!
+        <p>
+          ¡Feliz cumpleaños Yexi!
 
-        <br />
-        <span>
+          <br />
           Quería darte este regalo, ya que no hay otra cosa que pueda darte.
-        </span>
-        <br />
-        <span>
+
+          <br />
+
           No tengo muchas imágenes ni tampoco muchas cosas que pueda decirte,
           pero espero que al menos pueda servirme esto de despedida.
-        </span>
+        </p>
       </div>
       <div class="phrase" data-phrase="1">
-        Comencemos por aquí, este regalo fue algo muy especial para mí.
-        <br />
-        Nunca me sentí tan especial, como para que alguien me diera un regalo.
-        Me hiciste sentir importante y especial.
-        <br />
+        <p class="mb-2">
+          Comencemos por aquí, este regalo fue algo muy especial para mí.
+          <br />
+          Nunca me sentí tan especial, como para que alguien me diera un regalo.
+          Me hiciste sentir importante y especial.
+        </p>
         <img src="./img/primer-ano.jpg" class="img-record-1" alt="" />
       </div>
       <div class="phrase" data-phrase="2">
-        Esta foto fue de aquella vez que caminamos desde Tottus hasta Miraflores
-        y llegamos al parque del amor. Para mí fue la primera vez que visité ese
-        lugar, fue muy especial.
-        <br />
+        <p class="mb-2">
+          Esta foto fue de aquella vez que caminamos desde Tottus hasta
+          Miraflores y llegamos al parque del amor. Para mí fue la primera vez
+          que visité ese lugar, fue muy especial.
+        </p>
         <img src="./img/parque-amor.jpg" class="img-record-2" alt="" />
       </div>
       <div class="phrase" data-phrase="3">
-        Tus regalos más especiales para mí fueron tus dibujos. Siempre los amé.
-        <br />
+        <p class="mb-2">
+          Tus regalos más especiales para mí fueron tus dibujos. Siempre los
+          amé.
+        </p>
         <div class="img-container">
           <img src="./img/zed.jpg" class="img-record-3" alt="" />
           <img src="./img/dibujo-yexi.jpg" class="img-record-4" alt="" />
         </div>
       </div>
       <div class="phrase" data-phrase="4">
-        Recuerdo cuando tocaba en tu cuarto, y cuando vivímos juntos, tocaba en
-        la sala. Sentir que me escuchabas me hizo feliz. Muchas gracias por tu
-        cariño.
-        <br />
+        <p class="mb-2">
+          Recuerdo cuando tocaba en tu cuarto, y cuando vivímos juntos, tocaba
+          en la sala. Sentir que me escuchabas me hizo feliz. Muchas gracias por
+          tu cariño.
+        </p>
         <img src="./img/tocando-guitarra.jpg" class="img-record-5" alt="" />
       </div>
       <div class="phrase" data-phrase="5">
-        Fue especial cuando me acompañaste a Canta con mi familia. Nunca hice
-        algo así. Comenzaste a hacerte una parte aún más especial de mi vida.
-        <br />
+        <p class="mb-2">
+          Fue especial cuando me acompañaste a Canta con mi familia. Nunca hice
+          algo así. Comenzaste a hacerte una parte aún más especial de mi vida.
+        </p>
         <div class="img-container">
           <img src="./img/canta-1.jpg" class="img-record-6" alt="" />
           <img src="./img/canta-2.jpg" class="img-record-6" alt="" />
@@ -75,37 +84,42 @@
         <img src="./img/canta-3.jpg" class="img-record-7" alt="" />
       </div>
       <div class="phrase" data-phrase="7">
-        Tuvimos momentos buenos, momentos malos. Pasamos muchas cosas juntos.
-        <br />
-        Este recuerdo escuchando música en tu cuarto y tomando chelita.
-        <br />
+        <p class="mb-2">
+          Tuvimos momentos buenos, momentos malos. Pasamos muchas cosas juntos.
+          <br />
+          Este recuerdo escuchando música en tu cuarto y tomando chelita.
+        </p>
         <img src="./img/escuchando-musica.jpg" class="img-record-8" alt="" />
       </div>
 
       <div class="phrase" data-phrase="8">
-        Esta foto me recuerda uno de los momentos más difíciles y bajos que
-        enfrenté en mi vida.
-        <br />
-        A pesar de todo, me diste otra oportunidad y me sentí vivo de nuevo.
-        <br />
+        <p class="mb-2">
+          Esta foto me recuerda uno de los momentos más difíciles y bajos que
+          enfrenté en mi vida.
+          <br />
+          A pesar de todo, me diste otra oportunidad y me sentí vivo de nuevo.
+        </p>
         <img src="./img/beso-yexi.jpg" class="img-record-9" alt="" />
       </div>
 
       <div class="phrase" data-phrase="9">
-        Luego de ese momento difícil, comenzamos a convivir, nos conocimos mejor
-        y pasamos momentos muy buenos. Este es un recuerdo de aquellos días en
-        los que íbamos a casa de tu mamá y tomábamos chelita escuchando música.
-        <br />
+        <p class="mb-2">
+          Luego de ese momento difícil, comenzamos a convivir, nos conocimos
+          mejor y pasamos momentos muy buenos. Este es un recuerdo de aquellos
+          días en los que íbamos a casa de tu mamá y tomábamos chelita
+          escuchando música.
+        </p>
         <img src="./img/chelita-yexi.png" class="img-record-10" alt="" />
       </div>
 
       <div class="phrase" data-phrase="10">
-        Ya, en estos momentos, sin tí, me siento como un fantasma que regresa
-        sobre sus propios pasos.
-        <br />
-        Los lugares importantes, los lugares especiales... aquellos lugares por
-        los que pasamos juntos.
-        <br />
+        <p class="mb-2">
+          Ya, en estos momentos, sin tí, me siento como un fantasma que regresa
+          sobre sus propios pasos.
+          <br />
+          Los lugares importantes, los lugares especiales... aquellos lugares
+          por los que pasamos juntos.
+        </p>
         <div class="img-container">
           <img src="./img/lugar-especial-1.jpeg" class="img-record-11" alt="" />
           <img src="./img/lugar-especial-2.jpeg" class="img-record-12" alt="" />
@@ -113,13 +127,15 @@
       </div>
 
       <div class="phrase" data-phrase="11">
-        Por último, me queda este recuerdo en el que más tarde, ese mismo día,
-        tus palabras me quedarían grabadas en la piel.
-        <br />
-        "Haría cualquier cosa por tí, no seas tonto".
-        <br />
-        Algún día estaré a la altura de tus palabras.
-        <br />
+        <p class="mb-2">
+          Por último, me queda este recuerdo en el que más tarde, ese mismo día,
+          tus palabras me quedarían grabadas en la piel.
+          <br />
+          "Haría cualquier cosa por tí, no seas tonto".
+          <br />
+          Algún día estaré a la altura de tus palabras.
+        </p>
+
         <div class="img-container">
           <img
             src="./img/ultima-foto-ghibli.png"

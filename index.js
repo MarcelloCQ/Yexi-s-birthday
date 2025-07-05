@@ -4,8 +4,6 @@ class ScrollPhrases {
     this.totalPhrases = this.phrases.length;
     this.currentPhrase = 0;
     this.isTransitioning = false;
-    this.musicPlaying = false;
-    this.audio = null;
 
     this.init();
   }
@@ -26,11 +24,6 @@ class ScrollPhrases {
         });
         ticking = true;
       }
-    });
-
-    // Control de música
-    document.getElementById("musicControl").addEventListener("click", () => {
-      this.toggleMusic();
     });
 
     // Prevenir scroll horizontal
@@ -94,39 +87,60 @@ class ScrollPhrases {
     const progressBar = document.getElementById("progressBar");
     progressBar.style.width = scrollPercent * 100 + "%";
   }
-
-  toggleMusic() {
-    const playIcon = document.getElementById("playIcon");
-    const pauseIcon = document.getElementById("pauseIcon");
-
-    if (!this.musicPlaying) {
-      // Aquí puedes agregar tu archivo de música
-      // this.audio = new Audio('tu-archivo-de-musica.mp3');
-      // this.audio.loop = true;
-      // this.audio.play();
-
-      playIcon.style.display = "none";
-      pauseIcon.style.display = "block";
-      this.musicPlaying = true;
-
-      console.log("Música iniciada (agrega tu archivo de audio)");
-    } else {
-      // if (this.audio) {
-      //     this.audio.pause();
-      // }
-
-      playIcon.style.display = "block";
-      pauseIcon.style.display = "none";
-      this.musicPlaying = false;
-
-      console.log("Música pausada");
-    }
-  }
 }
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
   new ScrollPhrases();
+
+  const playIcon = document.getElementById("playIcon");
+  const pauseIcon = document.getElementById("pauseIcon");
+  const musicControl = document.getElementById("musicControl");
+  const music = document.getElementById("bgMusic");
+
+  music.volume = 0.3;
+  let isPlaying = false;
+
+  function toggleMusic() {
+    if (isPlaying) {
+      music.pause();
+      playIcon.style.display = "block";
+      pauseIcon.style.display = "none";
+      isPlaying = false;
+    } else {
+      music
+        .play()
+        .then(() => {
+          playIcon.style.display = "none";
+          pauseIcon.style.display = "block";
+          isPlaying = true;
+        })
+        .catch((err) => {
+          console.warn("Autoplay bloqueado o error al reproducir:", err);
+        });
+    }
+  }
+
+  document.body.addEventListener(
+    "click",
+    function firstClick() {
+      music
+        .play()
+        .then(() => {
+          playIcon.style.display = "none";
+          pauseIcon.style.display = "block";
+          isPlaying = true;
+        })
+        .catch((err) => {
+          console.warn("Autoplay bloqueado o error al reproducir:", err);
+        });
+      document.body.removeEventListener("click", firstClick);
+    },
+    { once: true }
+  );
+
+  // Evento del botón play/pause
+  musicControl.addEventListener("click", toggleMusic);
 });
 
 // Smooth scroll behavior

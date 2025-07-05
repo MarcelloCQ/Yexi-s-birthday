@@ -6,7 +6,7 @@
 
 body {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   overflow-x: hidden;
   height: 850vh;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 .phrase {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: bold;
   color: white;
   line-height: 1.2;
@@ -121,7 +121,7 @@ img {
 
 .img-record-7 {
   width: 100%;
-  max-width: 450px;
+  max-width: 300px;
 }
 
 .img-record-8 {
@@ -161,7 +161,7 @@ img {
 
 @media (min-width: 500px) {
   .img-record-1 {
-    max-width: 450px;
+    max-width: 360px;
   }
   .img-record-4 {
     max-width: 300px;
@@ -171,12 +171,16 @@ img {
     max-width: 250px;
   }
 
+  .img-record-7 {
+    max-width: 400px;
+  }
+
   .img-record-9 {
     max-width: 300px;
   }
 
   .img-record-10 {
-    max-width: 230px;
+    max-width: 210px;
   }
 
   .img-record-11 {
@@ -213,9 +217,17 @@ img {
   }
 }
 
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
 /* Efectos adicionales para el texto */
 .phrase::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
